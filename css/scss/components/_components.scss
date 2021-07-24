@@ -1,0 +1,23 @@
+// buttons
+.grad-button {
+  border: none;
+  background-image: $Grad;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  transition: .3s;
+  cursor: pointer;
+  font-size: $Fontsize - 2px;
+  &:hover {
+    opacity: .6;
+  }
+}
+
+// hover effects
+
+%text-hover {
+  &:hover {
+    transition: .3s;
+    color: $LimeGreen;
+  }
+}

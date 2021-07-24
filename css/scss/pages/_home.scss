@@ -1,0 +1,208 @@
+.landing {
+  min-height: calc(100vh - 86px);
+  background-color: $VeryLightGray;
+  padding-bottom: 50px;
+  .overlay {
+    position: fixed;
+    transition: .5s;
+    top: -100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: $DarkBlue, $alpha: .5);
+    z-index: 18;
+  }
+  .container {
+    height: 100%;
+    display: flex;
+    @include maxMedia(767) {
+      flex-direction: column-reverse;
+    }
+    .section {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      @include maxMedia(767) {
+        width: 100%;
+      }
+      .grad-button {
+        margin-right: auto;
+        @include maxMedia(767) {
+          margin: auto;
+        }
+      }
+      .text {
+        padding-top: 150px;
+        @include maxMedia(767) {
+          padding-top: 0;
+          text-align: center;
+        }
+        h1 {
+          font-size: 3em;
+          color: $DarkBlue;
+          margin: 0;
+          font-weight: 400;
+          @include maxMedia(991) {
+            font-size: 2em;
+          }
+        }
+        p {
+          color: $GrayishBlue;
+          padding-right: 100px;
+          font-weight: 400;
+          line-height: 1.6;
+          @include maxMedia(991) {
+            padding: 0;
+          }
+        }
+      }
+    }
+    .img-holder {
+      position: relative;
+      height: 60vh;
+      .mobile {
+        position: absolute;
+        top: -60%;
+        left: -80px;
+        @include maxMedia(767) {
+          left: -30px;
+          top: 0px;
+        }
+      }
+      .svg {
+        z-index: 15;
+        position: absolute;
+        top: -115px;
+        left: 80px;
+        @include maxMedia(767) {
+          max-width: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+.features {
+  background-color: $LightGrayishBlue;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  position: relative;
+  .container {
+    @include maxMedia(767) {
+      text-align: center;
+    }
+    .text {
+      width: 60%;
+      margin-bottom: 50px;
+      @include maxMedia(767) {
+        width: 100%;
+      }
+      h2 {
+        font-size: 2em;
+        font-weight: 400;
+        color: $DarkBlue;
+        margin: 0 0 10px;
+      }
+      p {
+        margin: 0;
+        color: $GrayishBlue;
+        line-height: 1.6;
+        font-weight: 400;
+      }
+    }
+    .features-content {
+      display: flex;
+      gap: 20px;
+      @include maxMedia(991) {
+        flex-direction: column;
+      }
+      .box {
+        gap: 20px;
+        display: flex;
+        @include maxMedia(767) {
+          flex-direction: column;
+        }
+        .feat {
+          flex: 1;
+          .about {
+            h3 {
+              font-weight: 400;
+              color: $DarkBlue;
+              font-size: 1.5em;
+            }
+            p {
+              line-height: 1.6;
+              color: $GrayishBlue;
+              font-size: $Fontsize - 2px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.galary {
+  background-color: $VeryLightGray;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  .container {
+    @include maxMedia(767) {
+      text-align: center;
+    }
+    h2 {
+      font-weight: 400;
+      font-size: 2.5em;
+      color: $DarkBlue;
+    }
+    .content {
+      display: flex;
+      gap: 30px;
+      @include maxMedia(991) {
+        flex-direction: column;
+      }
+      .box {
+        display: flex;
+        gap: 30px;
+        @include maxMedia(767) {
+          flex-direction: column;
+        }
+        .card {
+          background-color: white;
+          border-radius: 6px;
+          overflow: hidden;
+          .img {
+            height: 195px;
+            img {
+              max-width: 100%;
+              height: 100%;
+            }
+          }
+          .text {
+            padding: 30px 30px 30px 30px;
+            span {
+              display: block;
+              color: $GrayishBlue;
+              font-size: $Fontsize - 6px;
+            }
+            h3 {
+              font-weight: 400;
+              font-size: 1em;
+              @extend %text-hover;
+            }
+            p {
+              margin: 0;
+              font-size: $Fontsize - 6px;
+              color: $GrayishBlue;
+              line-height: 1.6;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+.header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: $White;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .logo {
+      cursor: pointer;
+    }
+    button {
+      @include maxMedia(991) {
+        display: none;
+      }
+    }
+    .list {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      @include maxMedia(991) {
+        display: none;
+      }
+      .list-item {
+        position: relative;
+        cursor: pointer;
+        &::after {
+          content: "";
+          transition: .3s;
+          position: absolute;
+          bottom: -33px;
+          left: 0;
+          width: 0%;
+          height: 5px;
+          background-image: $Grad;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+        &:hover a {
+          color: black;
+          font-weight: 400;
+        }
+        a {
+          text-decoration: none;
+          color: $GrayishBlue;
+          font-size: $Fontsize - 2px;
+        }
+      }
+    }
+    .mobile-list {
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      transform: translateX(-50%);
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      gap: 15px;
+      width: 80%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      transition: .5s;
+      background-color: white;
+      border-radius: 6px;
+      .list-item {
+        position: relative;
+        cursor: pointer;
+        a {
+          text-decoration: none;
+          color: $DarkBlue;
+          font-size: $Fontsize - 2px;
+        }
+      }
+    }
+    .burger-icon {
+      @include minMedia(992) {
+        display: none;
+      }
+    }
+  }
+}

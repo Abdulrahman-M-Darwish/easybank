@@ -1,0 +1,79 @@
+.footer {
+  background-color: $DarkBlue;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    .col-1 {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      .social {
+        display: flex;
+        gap: 15px;
+        cursor: pointer;
+        .icon {
+          &:hover path {
+            transition: .3s;
+            fill: $LimeGreen;
+          }
+        }
+      }
+    }
+    .col-2,
+    .col-3 {
+      .list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        @include maxMedia(767) {
+          align-items: center;
+        }
+        li {
+          a {
+            color: white;
+            @extend %text-hover;
+            text-decoration: none;
+            font-size: $Fontsize - 4px;
+          }
+        }
+      }
+      @include maxMedia(767) {
+        width: 100%;
+      }
+    }
+    .col-4 {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      p {
+        color: $GrayishBlue;
+        font-size: $Fontsize - 2px;
+      }
+      button {
+        margin-left: auto;
+        @include maxMedia(767) {
+          margin: auto;
+        }
+      }
+    }
+    @include maxMedia(767) {
+      flex-direction: column;
+      .col-1,
+      .col-2,
+      .col-3,
+      .col-4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

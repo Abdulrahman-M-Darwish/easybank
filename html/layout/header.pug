@@ -1,0 +1,12 @@
+.header
+  .container
+    .logo: img(src="./images/logo.svg", class="logo", alt="logo - easybank")
+    ul.list
+      - let items = ["Home", "About", "Contact", "Blog", "Careers"]
+      each item in items
+        li.list-item: a.link(href="#")= item
+    ul.mobile-list
+      each item in items
+        li.list-item: a.link(href="#")= item
+    button.grad-button Request Invite
+    .burger-icon: img(src="./images/icon-hamburger.svg", alt="burger - icon") 

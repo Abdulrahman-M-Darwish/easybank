@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font: {
+    family: 'Public Sans', sans-serif;
+    size: $Fontsize;
+    weight: 300;
+  }
+  overflow-x: hidden;
+}
